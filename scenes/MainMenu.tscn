@@ -1,0 +1,136 @@
+[gd_scene load_steps=21 format=3 uid="uid://dwib7lt1wlbk1"]
+
+[ext_resource type="Script" path="res://src/MainMenu.gd" id="1_a4rwp"]
+[ext_resource type="Texture2D" uid="uid://bdntma85wdgrh" path="res://assets/background/portada.png" id="1_pbrin"]
+[ext_resource type="Texture2D" uid="uid://b6ejrfs2ndisa" path="res://assets/media/buttons/buttons-play-normal.png" id="3_8kwff"]
+[ext_resource type="Texture2D" uid="uid://g76b0kxqxwjq" path="res://assets/media/buttons/buttons-play-clicked.png" id="4_w3rnk"]
+[ext_resource type="Texture2D" uid="uid://cwnw08ls1v8k2" path="res://assets/media/buttons/buttons-play-hovered.png" id="5_0j6f7"]
+[ext_resource type="Texture2D" uid="uid://besc3ata1053a" path="res://assets/media/buttons/buttons-play-inactive.png" id="6_hudlv"]
+[ext_resource type="AudioStream" uid="uid://c8oxul0a0xvsc" path="res://assets/sound/MainMenu.ogg" id="6_vu40n"]
+[ext_resource type="Texture2D" uid="uid://cpx2eafk2pcuw" path="res://assets/media/buttons/buttons-options-normal.png" id="7_2vek1"]
+[ext_resource type="Texture2D" uid="uid://gcy1iymlphs7" path="res://assets/media/buttons/buttons-options-clicked.png" id="8_u1grc"]
+[ext_resource type="Texture2D" uid="uid://uw6ywco6opk7" path="res://assets/media/the-adventure.png" id="9_4fehj"]
+[ext_resource type="Texture2D" uid="uid://peydjwmpecin" path="res://assets/media/buttons/buttons-options-hovered.png" id="9_ktwt1"]
+[ext_resource type="Texture2D" uid="uid://b6kg0dxvqj2o1" path="res://assets/media/buttons/buttons-options-inactive.png" id="10_8b4nr"]
+[ext_resource type="Texture2D" uid="uid://dcb5xe8fle0i8" path="res://assets/media/buttons/buttons-credits-normal.png" id="11_d0tav"]
+[ext_resource type="Texture2D" uid="uid://7ytngofvhsdo" path="res://assets/media/buttons/buttons-credits-clicked.png" id="12_x33ps"]
+[ext_resource type="Texture2D" uid="uid://civpikmnth0gy" path="res://assets/media/buttons/buttons-credits-hovered.png" id="13_vylcm"]
+[ext_resource type="Texture2D" uid="uid://dax56145tqec4" path="res://assets/media/buttons/buttons-credits-inactive.png" id="14_crxnr"]
+[ext_resource type="Texture2D" uid="uid://bg6toin58jpoe" path="res://assets/media/buttons/buttons-exit-normal.png" id="15_4q8mj"]
+[ext_resource type="Texture2D" uid="uid://qdwdfvfj50ji" path="res://assets/media/buttons/buttons-exit-clicked.png" id="16_34ltg"]
+[ext_resource type="Texture2D" uid="uid://by4sa1ipuciq" path="res://assets/media/buttons/buttons-exit-hovered.png" id="17_ej6p7"]
+[ext_resource type="Texture2D" uid="uid://dbtijlpxbmu4x" path="res://assets/media/buttons/buttons-exit-Inactive.png" id="18_14l3w"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a4rwp")
+
+[node name="Background" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_pbrin")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="Title" type="TextureRect" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.016
+anchor_top = 0.025
+anchor_right = 0.562
+anchor_bottom = 0.226
+offset_left = 0.567999
+offset_top = -0.200001
+offset_right = 418.576
+offset_bottom = 86.552
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("9_4fehj")
+stretch_mode = 3
+
+[node name="StartButton" type="TextureButton" parent="Background"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.146
+anchor_top = 0.287
+anchor_right = 0.352
+anchor_bottom = 0.404
+offset_left = -0.192032
+offset_top = 0.0239868
+offset_right = 0.495972
+offset_bottom = 0.207977
+texture_normal = ExtResource("3_8kwff")
+texture_pressed = ExtResource("4_w3rnk")
+texture_hover = ExtResource("5_0j6f7")
+texture_disabled = ExtResource("6_hudlv")
+
+[node name="OptionsButton" type="TextureButton" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.146
+anchor_top = 0.435
+anchor_right = 0.352
+anchor_bottom = 0.552
+offset_left = -0.192032
+offset_top = -0.880066
+offset_right = 0.495972
+offset_bottom = -0.696045
+disabled = true
+texture_normal = ExtResource("7_2vek1")
+texture_pressed = ExtResource("8_u1grc")
+texture_hover = ExtResource("9_ktwt1")
+texture_disabled = ExtResource("10_8b4nr")
+
+[node name="CreditsButton" type="TextureButton" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.146
+anchor_top = 0.585
+anchor_right = 0.352
+anchor_bottom = 0.702
+offset_left = -0.192032
+offset_top = -0.0800781
+offset_right = 0.495972
+offset_bottom = 0.103973
+disabled = true
+texture_normal = ExtResource("11_d0tav")
+texture_pressed = ExtResource("12_x33ps")
+texture_hover = ExtResource("13_vylcm")
+texture_disabled = ExtResource("14_crxnr")
+
+[node name="QuitButton" type="TextureButton" parent="Background"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.146
+anchor_top = 0.738
+anchor_right = 0.352
+anchor_bottom = 0.855
+offset_left = -0.192032
+offset_top = -0.22403
+offset_right = 0.495972
+offset_bottom = -0.0400391
+texture_normal = ExtResource("15_4q8mj")
+texture_pressed = ExtResource("16_34ltg")
+texture_hover = ExtResource("17_ej6p7")
+texture_disabled = ExtResource("18_14l3w")
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="Background"]
+stream = ExtResource("6_vu40n")
+volume_db = -15.0
+autoplay = true
+
+[connection signal="pressed" from="Background/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Background/QuitButton" to="." method="_on_quit_button_pressed"]

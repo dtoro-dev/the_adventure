@@ -1,0 +1,112 @@
+{ "frames": {
+   "rawdev-logo1 0.png": {
+    "frame": { "x": 0, "y": 0, "w": 702, "h": 232 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 702, "h": 232 },
+    "sourceSize": { "w": 702, "h": 232 },
+    "duration": 50
+   },
+   "rawdev-logo1 1.png": {
+    "frame": { "x": 702, "y": 0, "w": 702, "h": 232 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 702, "h": 232 },
+    "sourceSize": { "w": 702, "h": 232 },
+    "duration": 50
+   },
+   "rawdev-logo1 2.png": {
+    "frame": { "x": 1404, "y": 0, "w": 702, "h": 232 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 702, "h": 232 },
+    "sourceSize": { "w": 702, "h": 232 },
+    "duration": 50
+   },
+   "rawdev-logo1 3.png": {
+    "frame": { "x": 2106, "y": 0, "w": 702, "h": 232 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 702, "h": 232 },
+    "sourceSize": { "w": 702, "h": 232 },
+    "duration": 50
+   },
+   "rawdev-logo1 4.png": {
+    "frame": { "x": 2808, "y": 0, "w": 702, "h": 232 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 702, "h": 232 },
+    "sourceSize": { "w": 702, "h": 232 },
+    "duration": 50
+   },
+   "rawdev-logo1 5.png": {
+    "frame": { "x": 3510, "y": 0, "w": 702, "h": 232 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 702, "h": 232 },
+    "sourceSize": { "w": 702, "h": 232 },
+    "duration": 50
+   },
+   "rawdev-logo1 6.png": {
+    "frame": { "x": 4212, "y": 0, "w": 702, "h": 232 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 702, "h": 232 },
+    "sourceSize": { "w": 702, "h": 232 },
+    "duration": 50
+   },
+   "rawdev-logo1 7.png": {
+    "frame": { "x": 4914, "y": 0, "w": 702, "h": 232 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 702, "h": 232 },
+    "sourceSize": { "w": 702, "h": 232 },
+    "duration": 50
+   },
+   "rawdev-logo1 8.png": {
+    "frame": { "x": 5616, "y": 0, "w": 702, "h": 232 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 702, "h": 232 },
+    "sourceSize": { "w": 702, "h": 232 },
+    "duration": 50
+   },
+   "rawdev-logo1 9.png": {
+    "frame": { "x": 6318, "y": 0, "w": 702, "h": 232 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 702, "h": 232 },
+    "sourceSize": { "w": 702, "h": 232 },
+    "duration": 50
+   },
+   "rawdev-logo1 10.png": {
+    "frame": { "x": 7020, "y": 0, "w": 702, "h": 232 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 702, "h": 232 },
+    "sourceSize": { "w": 702, "h": 232 },
+    "duration": 50
+   },
+   "rawdev-logo1 11.png": {
+    "frame": { "x": 7722, "y": 0, "w": 702, "h": 232 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 702, "h": 232 },
+    "sourceSize": { "w": 702, "h": 232 },
+    "duration": 50
+   }
+ },
+ "meta": {
+  "app": "https://github.com/LibreSprite/LibreSprite/",
+  "version": "1.2-973d0e3d-SDL",
+  "image": "C:\\Users\\dtoro\\OneDrive\\Escritorio\\Proyecto\\godot\\TheAdventure\\assets\\sprites\\rawdev-logo1-sheet.png",
+  "format": "RGBA8888",
+  "size": { "w": 8424, "h": 232 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Layer 1", "opacity": 255, "blendMode": "normal" }
+  ]
+ }
+}

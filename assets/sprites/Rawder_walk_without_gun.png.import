@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1mh55g4w4os7"
-path="res://.godot/imported/Rawder_walk_without_gun.png-e56d3b51b535901e1a44fb844e73d0a5.ctex"
+uid="uid://cssqa8p7snln8"
+path="res://.godot/imported/rawder_walk_without_gun.png-2fcffa4255d30621f9e755c2f432315f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Rawder_walk_without_gun.png"
-dest_files=["res://.godot/imported/Rawder_walk_without_gun.png-e56d3b51b535901e1a44fb844e73d0a5.ctex"]
+source_file="res://assets/sprites/rawder_walk_without_gun.png"
+dest_files=["res://.godot/imported/rawder_walk_without_gun.png-2fcffa4255d30621f9e755c2f432315f.ctex"]
 
 [params]
 
