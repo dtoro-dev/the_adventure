@@ -40,14 +40,8 @@ Los siguientes personajes son creados por mi, tanto su diseño y distintas anima
 </p>
 
 <p align="center" style="margin-top: 40px">
-<<<<<<< HEAD
     <a style="color: white; font-size: 30px; font-weight: bold; text-decoration: none; border: 2px solid white; border-radius: 5px; padding: 10px 50px; background-color: #0f4a40; display: flex; gap: 20px; align-items: center; justify-content:center; width: 200px" href="./win/TheAdventure.exe">
       <span>Windows</span>
-=======
-    <a style="color: white; font-size: 30px; font-weight: bold; text-decoration: none; border: 2px solid white; border-radius: 5px; padding: 10px 50px; background-color: #0f4a40; display: flex; gap: 20px; align-items: center; justify-content:center; width: 200px;" href="./TheAdventure.exe">
-      <span>Descargar</span>
-      <img src="./download.png" width="30px" height="30px">
->>>>>>> 3c311ffacf52224f36b94b545cddfeb9c9dbc1fa
     </a>
     <a style="color: white; font-size: 30px; font-weight: bold; text-decoration: none; border: 2px solid white; border-radius: 5px; padding: 10px 50px; background-color: #0f4a40; display: flex; gap: 20px; align-items: center; justify-content:center; width: 200px; margin: 20px;" href="./apk/TheAdventure.apk">
       <span>Android (bugs)</span>
