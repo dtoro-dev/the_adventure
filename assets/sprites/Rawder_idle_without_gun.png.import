@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2why3exr0iyd"
-path="res://.godot/imported/Rawder_idle_without_gun.png-3dde6d517af636410ea7aed2977a7e1c.ctex"
+uid="uid://d2b36aiehlesk"
+path="res://.godot/imported/rawder_idle_without_gun.png-719a0a492f7dde08bf1ae9d7c7f67513.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Rawder_idle_without_gun.png"
-dest_files=["res://.godot/imported/Rawder_idle_without_gun.png-3dde6d517af636410ea7aed2977a7e1c.ctex"]
+source_file="res://assets/sprites/rawder_idle_without_gun.png"
+dest_files=["res://.godot/imported/rawder_idle_without_gun.png-719a0a492f7dde08bf1ae9d7c7f67513.ctex"]
 
 [params]
 

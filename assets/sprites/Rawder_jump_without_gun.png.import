@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://okhy5dw0vva2"
-path="res://.godot/imported/Rawder_jump_without_gun.png-f496a0c781865860f9e2a7351afa7e7c.ctex"
+uid="uid://ddduqdwqrr4fa"
+path="res://.godot/imported/rawder_jump_without_gun.png-76544e5a1d850727d244e370ad795d56.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Rawder_jump_without_gun.png"
-dest_files=["res://.godot/imported/Rawder_jump_without_gun.png-f496a0c781865860f9e2a7351afa7e7c.ctex"]
+source_file="res://assets/sprites/rawder_jump_without_gun.png"
+dest_files=["res://.godot/imported/rawder_jump_without_gun.png-76544e5a1d850727d244e370ad795d56.ctex"]
 
 [params]
 

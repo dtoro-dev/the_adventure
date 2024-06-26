@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://dakms5ythjwow"]
+[gd_scene load_steps=2 format=3 uid="uid://dsmu6mauuyfcv"]
 
 [ext_resource type="Texture2D" uid="uid://dqlspxsqa0ryk" path="res://assets/obstacle/rock.png" id="1_8g7cs"]
 
@@ -10,4 +10,4 @@ scale = Vector2(3, 3)
 texture = ExtResource("1_8g7cs")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(83, 44, 71, 23, 49, 17, 31, -10, 14, -23, 2, -23, -12, -45, -44, -42, -64, -31, -83, 13, -79, 41)
+polygon = PackedVector2Array(83, 44, 71, 23, 49, 17, 31, -10, 14, -23, 2, -23, -18, -42, -44, -42, -64, -31, -83, 13, -79, 41)

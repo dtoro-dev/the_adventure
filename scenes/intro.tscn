@@ -1,0 +1,340 @@
+[gd_scene load_steps=23 format=3 uid="uid://611jqu5bjubh"]
+
+[ext_resource type="Texture2D" uid="uid://dsif0cfkr87w" path="res://assets/sprites/rawdev-logo-sheet.png" id="1_pk7sx"]
+[ext_resource type="Texture2D" uid="uid://bdntma85wdgrh" path="res://assets/background/portada.png" id="1_sgbae"]
+[ext_resource type="AudioStream" uid="uid://eqst46p8yke5" path="res://assets/sound/whoosh.mp3" id="2_k6a2y"]
+[ext_resource type="Texture2D" uid="uid://uw6ywco6opk7" path="res://assets/media/the-adventure.png" id="2_mvnc6"]
+
+[sub_resource type="GDScript" id="GDScript_q5jvp"]
+script/source = "extends Control
+
+# Array de texturas de los logos y sprite de la marca personal
+var logos = []
+var current_logo = 0
+var portada = true
+
+func _ready():
+	logos = [
+		preload(\"res://assets/media/splash.png\"),
+		preload(\"res://assets/media/splash.png\")
+	]
+	$Logo.texture = logos[current_logo]
+	$Logo.visible = false
+	$ContainerSprite.visible = false  # Oculta el sprite de la marca al inicio
+	#$BackgroundImg.visible = false
+	$Timer.start()  # Inicia el temporizador
+	$FadeInOut.play(\"fade_in\")  # Inicia la animación de fade in
+
+# Esta función se llama automáticamente cuando ocurre un evento de entrada del usuario
+func _input(event):
+	if event.is_action_pressed(\"jump\") || event is InputEventScreenTouch and event.is_pressed():
+		$FadeInOut.play(\"fade_out\")
+		$ContainerSprite.visible = false
+		$BackgroundImg.visible = false
+		$ContainerSprite/Rawdev.stop()
+		get_tree().change_scene_to_file(\"res://scenes/MainMenu.tscn\")
+		$Timer.stop()
+
+func change_logo():
+	if current_logo == 0:
+		$BackgroundImg.visible = false
+		$Logo.visible = true  # Oculta el TextureRect
+		$ContainerSprite.visible = false  # Muestra el sprite de la marca
+		$FadeInOut.play(\"fade_in\")
+		$Timer.start()  # Reinicia el temporizador para el siguiente logo
+		current_logo += 1
+	elif current_logo < logos.size():
+		$Logo.texture = logos[0]
+		$Logo.visible = false
+		$BackgroundImg.visible = false
+		$FadeInOut.play(\"fade_in\")
+		$Timer.start()
+		current_logo += 1
+		$ContainerSprite.visible = true  # Muestra el sprite de la marca
+		$ContainerSprite/Whoosh.play()
+		$ContainerSprite/Rawdev.play(\"rawdev\")
+	else:
+		$ContainerSprite/Rawdev.stop()
+		get_tree().change_scene_to_file(\"res://scenes/MainMenu.tscn\")
+
+
+func _on_timer_timeout():
+	$FadeInOut.play(\"fade_out\")
+
+func _on_fade_in_out_animation_finished(anim_name):
+	if anim_name == \"fade_out\":
+		change_logo()
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_540ay"]
+atlas = ExtResource("1_pk7sx")
+region = Rect2(0, 0, 702, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jucy5"]
+atlas = ExtResource("1_pk7sx")
+region = Rect2(702, 0, 702, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfcxc"]
+atlas = ExtResource("1_pk7sx")
+region = Rect2(1404, 0, 702, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywc17"]
+atlas = ExtResource("1_pk7sx")
+region = Rect2(2106, 0, 702, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfo7r"]
+atlas = ExtResource("1_pk7sx")
+region = Rect2(2808, 0, 702, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hp5ie"]
+atlas = ExtResource("1_pk7sx")
+region = Rect2(3510, 0, 702, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahysa"]
+atlas = ExtResource("1_pk7sx")
+region = Rect2(4212, 0, 702, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrd1m"]
+atlas = ExtResource("1_pk7sx")
+region = Rect2(4914, 0, 702, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m75vp"]
+atlas = ExtResource("1_pk7sx")
+region = Rect2(5616, 0, 702, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vewht"]
+atlas = ExtResource("1_pk7sx")
+region = Rect2(6318, 0, 702, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uv8ku"]
+atlas = ExtResource("1_pk7sx")
+region = Rect2(7020, 0, 702, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1y2a"]
+atlas = ExtResource("1_pk7sx")
+region = Rect2(7722, 0, 702, 232)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ya8s1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_540ay")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jucy5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfcxc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywc17")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfo7r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hp5ie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahysa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrd1m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m75vp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vewht")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uv8ku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1y2a")
+}],
+"loop": true,
+"name": &"rawdev",
+"speed": 12.0
+}]
+
+[sub_resource type="Animation" id="Animation_52w2j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ContainerSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Logo:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xv5cf"]
+resource_name = "fade_in"
+length = 3.0
+loop_mode = 1
+step = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Logo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.05, 2.14),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.0327868), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ContainerSprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.05, 2.14),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vrpb7"]
+resource_name = "fade_out"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ContainerSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2.04, 2.95),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Logo:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.05, 2.9601),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.0406027)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rqmrp"]
+_data = {
+"RESET": SubResource("Animation_52w2j"),
+"fade_in": SubResource("Animation_xv5cf"),
+"fade_out": SubResource("Animation_vrpb7")
+}
+
+[node name="Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_q5jvp")
+
+[node name="BackgroundColor" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="BackgroundImg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_sgbae")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Title" type="TextureRect" parent="BackgroundImg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.665
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.0799866
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_mvnc6")
+stretch_mode = 3
+
+[node name="ContainerSprite" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Rawdev" type="AnimatedSprite2D" parent="ContainerSprite"]
+position = Vector2(9.99999, 27)
+scale = Vector2(0.668103, 0.668103)
+sprite_frames = SubResource("SpriteFrames_ya8s1")
+animation = &"rawdev"
+frame_progress = 0.349832
+
+[node name="Whoosh" type="AudioStreamPlayer" parent="ContainerSprite"]
+stream = ExtResource("2_k6a2y")
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -254.0
+offset_top = -228.0
+offset_right = 254.0
+offset_bottom = 228.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="FadeInOut" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rqmrp")
+}
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="animation_finished" from="FadeInOut" to="." method="_on_fade_in_out_animation_finished"]
