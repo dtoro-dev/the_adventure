@@ -21,10 +21,11 @@ Juego runner creado con Godot 4, juego que consiste en esquivar obstáculos mien
 - Compatibilidad con dispositivos android, aun que esta mantiene un bug por resoluciones dinámicas, las que iremos trabajando.
 - Fondos corregidos en android, ahora toman la totalidad de la pantalla.
 - Señales táctiles para jump o cruchdown.
+- Nueva música.
+- Escena para sponsors, de momento se muestra la nueva portada de The Adventure, el motor gráfico utilizado (GODOT 4) y la marca como desarrollador *Rawdev*.
 - Nueva Portada.
 <img src="./readme/portada-v1.0.1.png" alt="portada-v1.0.1" >
-- Nueva música.
-- Escena para sponsors, de momento se muestra la nueva portada de The Adventure, el motor gráfico utilizado (GODOT 4) y la marca como desarrollador *Rawdev*.</p>
+</p>
 
 ## v1.0.0
 <p align="center">
